@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- d3js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js"></script>
+
+		<!-- topojson -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+	</head>
+
+	<style>
+		body {
+			background-color: #000;
+		}
+
+		.county {
+			stroke: rgb( 204, 204, 204 );
+			opacity: 0.90;
+			stroke-width: 0.20px;
+			stroke-linejoin: round;
+			stroke-linecap: round;
+		}
+
+		.county:hover {
+			stroke-width: 4px;
+		}
+
+		.tooltip {
+			position: absolute;
+			padding: 1px;
+			font: 12px sans-serif;
+			background-color: #fff;
+			pointer-events: none;	
+		}
+
+		ul {
+			padding: 1px;
+		    list-style-type: none;
+		}
+
+		label {
+			color: #fff;
+		}
+
+	</style>
+
+	<body>
+		<div>
+  			<input type="radio" id="cases" name="metric" value="cases"
+         checked>
+  		<label for="cases">Number of Cases</label>
+		</div>
+		<div>
+  			<input type="radio" id="cpc" name="metric" value="cpc">
+  		<label for="cpc">Cases per 10,000 Residents</label>
+		</div>
+		<div class="tooltip"></div>
+		<svg></svg>
+	</body>
+
+	<script type="text/javascript">
+		var key = '97a6ddc5ae29404f291997e6edf6329da82f3dc0';
+		var states = [];
+		var metrics = {};
+		var metric = 'cases';
+		var svg = undefined;
+		var width = window.innerWidth * 0.90;
+		var height = window.innerHeight * 0.90;
+		var min_metric = 0;
+		var max_metric = 0;
+		var zoom = d3.zoom()
+		    .on( 'zoom', zoomed );
+
+		const buttons = d3.selectAll( "input[name='metric']" );
+		console.log( metric );
+		buttons.on( 'change', function( d ) {
+			metric = this.value;
+			set_color();
+		} );
+
+		var transform = d3.zoomIdentity;
+		svg = d3.select( 'svg' )
+					.style( 'width', width )
+					.style( 'height', height );
+
+		d3.json( 'https://raw.githubusercontent.com/gist/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/us.json' ).then( function( data ) {
+			path = d3.geoPath()
+				.projection( d3.geoAlbersUsa()
+				.fitSize( [width , height], topojson.feature( data, data.objects.counties ) ) );
+
+			transform.x = path.projection().translate()[0]
+			transform.y = path.projection().translate()[1]
+			transform.k = path.projection().scale()
+
+			svg.call( zoom )
+				.call( zoom.transform, transform );
+
+			var geojson = topojson.feature( data, data.objects.counties );
+
+			svg.selectAll( 'path' )
+				.data( geojson.features )
+				.enter().append( 'path' )
+					.attr( 'd', path )
+					.attr( 'id', function( d ) {
+						return d.id.toString().length < 5 ? '0' + d.id.toString() : d.id.toString();
+					} )
+					.attr( 'class', 'county' )
+					.on( 'mouseover', function( d ) {
+						var id = d.id.toString().length < 5 ? '0' + d.id.toString() : d.id.toString();
+						if( id in metrics ) {
+							var tooltip = d3.select( '.tooltip' );
+							tooltip.select( 'ul' ).remove();
+							var ul = tooltip.append( 'ul' );
+							ul.append( 'li' )
+								.html( metrics[id].county + ', ' + metrics[id].state );
+							ul.append( 'li' )
+								.html( 'Population: ' + metrics[id].population );
+							ul.append( 'li' )
+								.html( 'Cases: ' + metrics[id].cases )
+								.append( 'text' );
+							ul.append( 'li' )
+								.html( 'Cases per 10,000 Residents: ' + metrics[id].cpc );
+
+							tooltip
+								.style( 'left', d3.event.pageX + 'px' )
+								.style( 'top', d3.event.pageY + 'px' )
+						}
+					} )
+					.on( 'mouseout', function( d ) {
+						var tooltip = d3.select( '.tooltip' );
+						tooltip.select( 'ul' ).remove();
+						tooltip
+							.attr( 'x', -200 )
+							.attr( 'y', -200 )
+					} );
+		} );
+
+		d3.csv( 'https://raw.githubusercontent.com/wyattmaxey/coronamap/master/corona.csv' ).then( function( data ) {
+			
+			case_data = {};
+			for( let rec of data ) {
+				var state = rec['STATE'];
+				var county = rec['COUNTY'] + ' County';
+				if ( state in case_data ) {
+					case_data[state][county] = parseInt( rec['CASES'] );
+				} else {
+					case_data[state] = {};
+					case_data[state][county] = parseInt( rec['CASES'] );
+				}
+				if( !states.includes( state ) ) {
+					states.push( state );
+				}
+			}
+
+			states.sort();
+			console.log( states );
+			console.log( case_data );
+
+			d3.json( 'https://api.census.gov/data/2017/pep/population?get=POP,GEONAME&for=county:*' + '&key=' + key ).then( function( raw_data ) {
+				console.log( raw_data );
+				raw_data = raw_data.slice( 1, raw_data.length );
+				var merge_data = {};
+				for( var i in raw_data ) {
+					var state = raw_data[i][1].split( ',' )[1].trim();
+					var county = raw_data[i][1].split( ',' )[0];
+					if( state in case_data ) {
+						var cases = 0
+						if ( county in case_data[state] ) {
+							cases = case_data[state][county];
+						}
+						metrics[raw_data[i][2] + raw_data[i][3]] = {
+							'population': parseInt( raw_data[i][0] ),
+							'cases': cases,
+							'cpc': ( cases / ( parseInt( raw_data[i][0] ) / 10000 ) ).toFixed( 2 ),
+							'county': county,
+							'state': state
+						}
+					} else {
+						metrics[raw_data[i][2] + raw_data[i][3]] = {
+							'population': 0,
+							'cases': 0,
+							'cpc': 0,
+							'county': county,
+							'state': state
+						}
+					}
+				}
+				set_color();
+				console.log( metrics );
+			} );
+		} );
+
+		function zoomed() {
+			var transform = d3.event.transform;
+			path.projection()
+				.translate( [transform.x, transform.y] )
+				.scale( transform.k )
+
+			svg.selectAll( 'path' )
+				.attr( 'd', path );
+		}
+
+		function set_color() {
+			var colors = d3.interpolateOranges();
+			var min = 1;
+			var max = 0;
+			var arr = []
+			for( let [key, value] of Object.entries( metrics ) ) {
+				var m = value[metric];
+				if( m > 0 ) {
+					arr.push( m );
+				}
+				
+				if( m < min ) {
+					min = m;
+				}
+
+				if ( m > max ) {
+					max = m;
+				}
+			}
+			console.log( d3.schemeOrRd );
+			var scale = d3.scaleQuantile()
+					.domain( arr )
+					.range( d3.schemeOrRd[8] )
+			console.log( scale.quantiles() )
+			d3.selectAll( 'path' )
+				.attr( 'fill', function( d ) {
+					var id = d.id.toString().length < 5 ? '0' + d.id.toString() : d.id.toString();
+					if( id in metrics ) {
+						if ( metrics[id][metric] <= 0 ) {
+							return d3.interpolateOrRd( min * 0.90 );
+						}
+						return scale( metrics[id][metric] );
+					} else {
+						return d3.interpolateOrRd( min * 0.90 );
+					}
+				} );
+		}
+	</script>
+
+</html>
