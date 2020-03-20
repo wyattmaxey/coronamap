@@ -56,7 +56,7 @@
   			<input type="radio" id="cpc" name="metric" value="cpc">
   		<label for="cpc">Cases per 10,000 Residents</label>
 		</div>
-		<div class="tooltip"></div>
+		<div class="tooltip" left="-200px", top="-200px"></div>
 		<svg></svg>
 	</body>
 
@@ -74,7 +74,6 @@
 		    .on( 'zoom', zoomed );
 
 		const buttons = d3.selectAll( "input[name='metric']" );
-		console.log( metric );
 		buttons.on( 'change', function( d ) {
 			metric = this.value;
 			set_color();
@@ -132,8 +131,8 @@
 						var tooltip = d3.select( '.tooltip' );
 						tooltip.select( 'ul' ).remove();
 						tooltip
-							.attr( 'x', -200 )
-							.attr( 'y', -200 )
+							.attr( 'left', '-200px' )
+							.attr( 'top', '-200px' )
 					} );
 		} );
 
@@ -142,8 +141,14 @@
 			case_data = {};
 			for( let rec of data ) {
 				var state = rec['STATE'];
-				var county = rec['COUNTY'] + ' County';
-				if ( state in case_data ) {
+				var county = rec['COUNTY'];
+				if( state === 'Louisiana' ) {
+					county += ' Parish';
+				} else {
+					county += ' County';
+				}
+
+				if( state in case_data ) {
 					case_data[state][county] = parseInt( rec['CASES'] );
 				} else {
 					case_data[state] = {};
@@ -155,11 +160,8 @@
 			}
 
 			states.sort();
-			console.log( states );
-			console.log( case_data );
 
 			d3.json( 'https://api.census.gov/data/2017/pep/population?get=POP,GEONAME&for=county:*' + '&key=' + key ).then( function( raw_data ) {
-				console.log( raw_data );
 				raw_data = raw_data.slice( 1, raw_data.length );
 				var merge_data = {};
 				for( var i in raw_data ) {
@@ -225,7 +227,6 @@
 			var scale = d3.scaleQuantile()
 					.domain( arr )
 					.range( d3.schemeOrRd[8] )
-			console.log( scale.quantiles() )
 			d3.selectAll( 'path' )
 				.attr( 'fill', function( d ) {
 					var id = d.id.toString().length < 5 ? '0' + d.id.toString() : d.id.toString();
