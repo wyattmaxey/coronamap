@@ -102,7 +102,7 @@ Connecticut,Windham,2
 Delaware,Kent,4
 Delaware,New Castle,23
 Delaware,Sussex,3
-District of Columbia,,71
+District of Columbia,District of Columbia,71
 Florida,Alachua,11
 Florida,Baker,1
 Florida,Brevard,3
@@ -173,7 +173,6 @@ Georgia,Richmond,2
 Georgia,Rockdale,1
 Georgia,Troup,2
 Georgia,Whitfield,1
-Guam,,12
 Hawaii,Hawaii,1
 Hawaii,Honolulu,18
 Hawaii,Kauai,2
@@ -582,7 +581,6 @@ Pennsylvania,Washington,3
 Pennsylvania,Wayne,1
 Pennsylvania,Westmoreland,2
 Pennsylvania,York,2
-Puerto Rico,,6
 Rhode Island,Unknown,44
 South Carolina,Abbeville,1
 South Carolina,Anderson,3
@@ -672,7 +670,6 @@ Vermont,Orange,2
 Vermont,Unknown,7
 Vermont,Washington,1
 Vermont,Windsor,3
-Virgin Islands,,3
 Virginia,Alexandria city,3
 Virginia,Arlington,17
 Virginia,Charles City,1
