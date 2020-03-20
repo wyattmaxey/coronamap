@@ -29,10 +29,12 @@
 
 		.tooltip {
 			position: absolute;
-			padding: 1px;
 			font: 12px sans-serif;
-			background-color: #fff;
-			pointer-events: none;	
+			background-color: #F8F8FF;
+			opacity: 0.0;
+			pointer-events: none;
+			border-radius: 25px;
+			padding: 10px;
 		}
 
 		ul {
@@ -56,7 +58,7 @@
   			<input type="radio" id="cpc" name="metric" value="cpc">
   		<label for="cpc">Cases per 10,000 Residents</label>
 		</div>
-		<div class="tooltip" left="-200px", top="-200px"></div>
+		<div class="tooltip"></div>
 		<svg></svg>
 	</body>
 
@@ -125,14 +127,14 @@
 							tooltip
 								.style( 'left', d3.event.pageX + 'px' )
 								.style( 'top', d3.event.pageY + 'px' )
+								.style( 'opacity', 0.90 );
 						}
 					} )
 					.on( 'mouseout', function( d ) {
 						var tooltip = d3.select( '.tooltip' );
 						tooltip.select( 'ul' ).remove();
 						tooltip
-							.attr( 'left', '-200px' )
-							.attr( 'top', '-200px' )
+							.style( 'opacity', 0.0 );
 					} );
 		} );
 
