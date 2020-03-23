@@ -39,183 +39,191 @@ Arkansas,Benton,1
 Arkansas,Boone,1
 Arkansas,Bradley,1
 Arkansas,Clark,1
-Arkansas,Cleburne,22
+Arkansas,Cleburne,25
 Arkansas,Cleveland,1
 Arkansas,Craighead,1
 Arkansas,Crittenden,1
 Arkansas,Desha,1
-Arkansas,Faulkner,1
-Arkansas,Garland,6
+Arkansas,Faulkner,7
+Arkansas,Garland,9
 Arkansas,Grant,1
 Arkansas,Greene,1
 Arkansas,Independence,1
-Arkansas,Jefferson,19
+Arkansas,Jefferson,20
 Arkansas,Lincoln,1
 Arkansas,Poinsett,1
 Arkansas,Polk,1
 Arkansas,Pope,1
-Arkansas,Pulaski,28
+Arkansas,Pulaski,52
 Arkansas,Saline,1
 Arkansas,Searcy,1
 Arkansas,Sebastian,1
 Arkansas,Sevier,1
-Arkansas,Unknown,68
+Arkansas,Unknown,27
 Arkansas,Van Buren,1
-Arkansas,Washington,1
-California,Alameda,87
-California,Butte,1
-California,Contra Costa,51
+Arkansas,Washington,5
+California,Alameda,127
+California,Amador,1
+California,Butte,2
+California,Contra Costa,61
 California,El Dorado,2
 California,Fresno,10
 California,Humboldt,2
 California,Imperial,4
-California,Kern,4
-California,Los Angeles,351
+California,Kern,5
+California,Los Angeles,421
 California,Madera,3
 California,Marin,38
 California,Mendocino,1
-California,Monterey,11
+California,Monterey,14
 California,Napa,1
 California,Nevada,1
-California,Orange,78
+California,Orange,95
 California,Placer,12
-California,Riverside,30
+California,Riverside,45
 California,Sacramento,52
-California,San Benito,2
-California,San Bernardino,9
-California,San Diego,159
-California,San Francisco,84
-California,San Joaquin,31
-California,San Luis Obispo,21
-California,San Mateo,110
-California,Santa Barbara,17
-California,Santa Clara,263
-California,Santa Cruz,2
-California,Shasta,1
+California,San Benito,5
+California,San Bernardino,17
+California,San Diego,205
+California,San Francisco,111
+California,San Joaquin,41
+California,San Luis Obispo,27
+California,San Mateo,117
+California,Santa Barbara,18
+California,Santa Clara,303
+California,Santa Cruz,15
+California,Shasta,2
 California,Siskiyou,2
 California,Solano,19
 California,Sonoma,11
-California,Stanislaus,5
-California,Tulare,11
-California,Ventura,26
+California,Stanislaus,8
+California,Tulare,12
+California,Unknown,1
+California,Ventura,30
 California,Yolo,6
 California,Yuba,2
-Colorado,Adams,14
-Colorado,Arapahoe,40
-Colorado,Boulder,30
+Colorado,Adams,18
+Colorado,Arapahoe,45
+Colorado,Boulder,37
 Colorado,Broomfield,1
-Colorado,Chaffee,2
+Colorado,Chaffee,3
 Colorado,Clear Creek,3
 Colorado,Crowley,1
-Colorado,Denver,98
-Colorado,Douglas,27
-Colorado,Eagle,74
-Colorado,El Paso,37
+Colorado,Denver,125
+Colorado,Douglas,33
+Colorado,Eagle,80
+Colorado,El Paso,51
 Colorado,Elbert,3
-Colorado,Garfield,7
+Colorado,Garfield,8
 Colorado,Grand,2
-Colorado,Gunnison,18
+Colorado,Gunnison,22
 Colorado,Hinsdale,1
-Colorado,Jefferson,43
-Colorado,Larimer,19
-Colorado,Mesa,1
+Colorado,Jefferson,51
+Colorado,Larimer,32
+Colorado,Mesa,2
 Colorado,Montrose,1
 Colorado,Morgan,2
 Colorado,Park,1
-Colorado,Pitkin,15
+Colorado,Pitkin,16
 Colorado,Pueblo,3
-Colorado,Routt,2
+Colorado,Routt,3
 Colorado,San Miguel,1
 Colorado,Summit,7
-Colorado,Weld,21
+Colorado,Unknown,1
+Colorado,Weld,37
 Colorado,Yuma,1
-Connecticut,Fairfield,140
-Connecticut,Hartford,35
-Connecticut,Litchfield,11
+Connecticut,Fairfield,208
+Connecticut,Hartford,54
+Connecticut,Litchfield,12
 Connecticut,Middlesex,6
-Connecticut,New Haven,24
-Connecticut,New London,1
-Connecticut,Tolland,5
+Connecticut,New Haven,29
+Connecticut,New London,3
+Connecticut,Tolland,14
 Connecticut,Windham,1
 Delaware,Kent,5
-Delaware,New Castle,33
-Delaware,Sussex,9
+Delaware,New Castle,39
+Delaware,Sussex,12
 District of Columbia,District of Columbia,98
-Florida,Alachua,29
-Florida,Baker,1
+Florida,Alachua,35
+Florida,Baker,2
 Florida,Bay,1
-Florida,Brevard,5
-Florida,Broward,180
+Florida,Bradford,1
+Florida,Brevard,7
+Florida,Broward,217
 Florida,Charlotte,2
 Florida,Citrus,8
-Florida,Clay,6
-Florida,Collier,28
-Florida,Columbia,1
-Florida,Duval,37
-Florida,Escambia,1
+Florida,Clay,7
+Florida,Collier,33
+Florida,Columbia,2
+Florida,DeSoto,1
+Florida,Duval,39
+Florida,Escambia,4
+Florida,Flagler,1
 Florida,Gadsden,1
 Florida,Hernando,5
 Florida,Highlands,1
-Florida,Hillsborough,50
+Florida,Hillsborough,58
 Florida,Indian River,8
 Florida,Jackson,1
 Florida,Lake,6
-Florida,Lee,18
+Florida,Lee,26
 Florida,Leon,4
 Florida,Manatee,13
 Florida,Marion,3
-Florida,Martin,1
-Florida,Miami-Dade,177
+Florida,Martin,2
+Florida,Miami-Dade,227
 Florida,Monroe,1
-Florida,Nassau,1
-Florida,Okaloosa,12
-Florida,Orange,29
-Florida,Osceola,22
-Florida,Palm Beach,59
-Florida,Pasco,8
-Florida,Pinellas,30
+Florida,Nassau,2
+Florida,Okaloosa,13
+Florida,Orange,32
+Florida,Osceola,24
+Florida,Palm Beach,71
+Florida,Pasco,11
+Florida,Pinellas,38
 Florida,Polk,11
-Florida,Putnam,1
-Florida,Santa Rosa,3
-Florida,Sarasota,15
-Florida,Seminole,16
-Florida,St. Johns,12
-Florida,St. Lucie,2
-Florida,Sumter,4
+Florida,Putnam,2
+Florida,Santa Rosa,4
+Florida,Sarasota,17
+Florida,Seminole,19
+Florida,St. Johns,16
+Florida,St. Lucie,3
+Florida,Sumter,5
 Florida,Unknown,1
-Florida,Volusia,12
+Florida,Volusia,14
 Florida,Walton,4
 Georgia,Baldwin,2
-Georgia,Barrow,2
-Georgia,Bartow,58
+Georgia,Barrow,1
+Georgia,Bartow,56
 Georgia,Bibb,1
-Georgia,Butts,1
-Georgia,Carroll,14
+Georgia,Butts,2
+Georgia,Carroll,16
 Georgia,Charlton,1
 Georgia,Chatham,4
 Georgia,Chattooga,1
 Georgia,Cherokee,18
-Georgia,Clarke,9
-Georgia,Clayton,14
-Georgia,Cobb,65
+Georgia,Clarke,10
+Georgia,Clayton,13
+Georgia,Clinch,1
+Georgia,Cobb,67
+Georgia,Coffee,1
 Georgia,Columbia,3
-Georgia,Coweta,8
+Georgia,Coweta,9
 Georgia,Dawson,1
-Georgia,DeKalb,45
-Georgia,Dougherty,48
+Georgia,DeKalb,53
+Georgia,Dougherty,52
 Georgia,Douglas,4
 Georgia,Early,2
 Georgia,Effingham,2
-Georgia,Fayette,10
+Georgia,Fayette,9
 Georgia,Floyd,9
-Georgia,Forsyth,4
-Georgia,Fulton,109
-Georgia,Glynn,3
+Georgia,Forsyth,5
+Georgia,Fulton,111
+Georgia,Glynn,4
 Georgia,Gordon,4
 Georgia,Gwinnett,27
 Georgia,Hall,9
 Georgia,Heard,1
-Georgia,Henry,8
+Georgia,Henry,7
 Georgia,Houston,1
 Georgia,Lamar,3
 Georgia,Laurens,2
@@ -227,7 +235,7 @@ Georgia,Miller,1
 Georgia,Monroe,1
 Georgia,Muscogee,2
 Georgia,Newton,4
-Georgia,Oconee,1
+Georgia,Oconee,2
 Georgia,Paulding,4
 Georgia,Peach,3
 Georgia,Pickens,2
@@ -237,26 +245,28 @@ Georgia,Richmond,10
 Georgia,Rockdale,2
 Georgia,Spalding,2
 Georgia,Sumter,2
+Georgia,Tattnall,1
 Georgia,Terrell,2
 Georgia,Tift,2
 Georgia,Troup,4
 Georgia,Turner,1
 Georgia,Twiggs,1
-Georgia,Unknown,28
+Georgia,Unknown,27
 Georgia,Whitfield,2
 Georgia,Worth,2
 Hawaii,Hawaii,3
-Hawaii,Honolulu,35
+Hawaii,Honolulu,41
 Hawaii,Kauai,3
-Hawaii,Maui,7
-Idaho,Ada,11
+Hawaii,Maui,9
+Idaho,Ada,13
+Idaho,Bingham,1
 Idaho,Blaine,21
-Idaho,Canyon,1
-Idaho,Fremont,1
+Idaho,Canyon,3
 Idaho,Kootenai,3
 Idaho,Madison,2
 Idaho,Teton,2
 Idaho,Twin Falls,1
+Idaho,Valley,1
 Illinois,Adams,1
 Illinois,Champaign,4
 Illinois,Christian,1
@@ -368,23 +378,26 @@ Kansas,Wyandotte,14
 Kentucky,Anderson,1
 Kentucky,Bourbon,2
 Kentucky,Calloway,1
-Kentucky,Christian,1
+Kentucky,Christian,2
 Kentucky,Clark,2
 Kentucky,Daviess,1
-Kentucky,Fayette,13
+Kentucky,Fayette,14
 Kentucky,Franklin,1
+Kentucky,Hardin,1
 Kentucky,Harrison,8
-Kentucky,Henderson,2
+Kentucky,Henderson,4
 Kentucky,Jefferson,25
-Kentucky,Kenton,2
+Kentucky,Jessamine,1
+Kentucky,Kenton,5
 Kentucky,Lyon,1
-Kentucky,Madison,1
+Kentucky,Madison,2
 Kentucky,Montgomery,2
 Kentucky,Nelson,1
+Kentucky,Oldham,1
 Kentucky,Pulaski,2
 Kentucky,Spencer,1
-Kentucky,Unknown,28
-Kentucky,Warren,4
+Kentucky,Unknown,20
+Kentucky,Warren,5
 Louisiana,Acadia,1
 Louisiana,Ascension,17
 Louisiana,Assumption,1
@@ -450,19 +463,20 @@ Maryland,Talbot,1
 Maryland,Washington,1
 Maryland,Wicomico,2
 Maryland,Worcester,2
-Massachusetts,Barnstable,11
-Massachusetts,Berkshire,21
-Massachusetts,Bristol,14
-Massachusetts,Essex,41
+Massachusetts,Barnstable,24
+Massachusetts,Berkshire,23
+Massachusetts,Bristol,24
+Massachusetts,Essex,60
 Massachusetts,Franklin,2
-Massachusetts,Hampden,9
-Massachusetts,Hampshire,2
-Massachusetts,Middlesex,177
-Massachusetts,Norfolk,69
-Massachusetts,Plymouth,20
-Massachusetts,Suffolk,108
-Massachusetts,Unknown,27
-Massachusetts,Worcester,24
+Massachusetts,Hampden,12
+Massachusetts,Hampshire,4
+Massachusetts,Middlesex,199
+Massachusetts,Nantucket,1
+Massachusetts,Norfolk,75
+Massachusetts,Plymouth,25
+Massachusetts,Suffolk,126
+Massachusetts,Unknown,34
+Massachusetts,Worcester,37
 Michigan,Allegan,1
 Michigan,Barry,1
 Michigan,Bay,1
@@ -590,23 +604,24 @@ Missouri,Kansas City,13
 Missouri,Pulaski,1
 Missouri,Scott,1
 Missouri,St. Charles,3
-Missouri,St. Louis,22
-Missouri,St. Louis city,7
+Missouri,St. Louis,55
+Missouri,St. Louis city,14
 Missouri,Unknown,1
 Montana,Broadwater,1
 Montana,Cascade,3
 Montana,Flathead,2
-Montana,Gallatin,8
+Montana,Gallatin,10
 Montana,Lewis and Clark,3
 Montana,Madison,1
 Montana,Missoula,4
 Montana,Ravalli,1
 Montana,Roosevelt,1
 Montana,Silver Bow,2
-Montana,Yellowstone,5
+Montana,Yellowstone,6
 Nebraska,Adams,1
 Nebraska,Buffalo,2
 Nebraska,Cass,1
+Nebraska,Dawson,1
 Nebraska,Douglas,46
 Nebraska,Knox,2
 Nebraska,Lancaster,2
@@ -615,17 +630,19 @@ Nebraska,Nemaha,1
 Nebraska,Sarpy,3
 Nevada,Carson City,3
 Nevada,Clark,126
-Nevada,Unknown,36
+Nevada,Elko,2
+Nevada,Nye,1
+Nevada,Unknown,33
 Nevada,Washoe,25
-New Hampshire,Belknap,3
-New Hampshire,Carroll,5
+New Hampshire,Belknap,4
+New Hampshire,Carroll,6
 New Hampshire,Cheshire,1
-New Hampshire,Coos,1
-New Hampshire,Grafton,13
-New Hampshire,Hillsborough,12
+New Hampshire,Grafton,15
+New Hampshire,Hillsborough,16
 New Hampshire,Merrimack,4
-New Hampshire,Rockingham,25
-New Hampshire,Strafford,1
+New Hampshire,Rockingham,28
+New Hampshire,Strafford,3
+New Hampshire,Sullivan,1
 New Jersey,Atlantic,5
 New Jersey,Bergen,457
 New Jersey,Burlington,26
@@ -648,61 +665,64 @@ New Jersey,Sussex,12
 New Jersey,Union,124
 New Jersey,Unknown,221
 New Jersey,Warren,9
-New Mexico,Bernalillo,32
-New Mexico,Doña Ana,2
+New Mexico,Bernalillo,34
+New Mexico,Doña Ana,4
 New Mexico,Lea,1
-New Mexico,McKinley,1
+New Mexico,McKinley,2
+New Mexico,San Juan,1
 New Mexico,San Miguel,1
 New Mexico,Sandoval,7
-New Mexico,Santa Fe,8
+New Mexico,Santa Fe,10
 New Mexico,Socorro,2
 New Mexico,Taos,3
 New York,Albany,123
 New York,Allegany,2
-New York,Broome,2
-New York,Chenango,2
+New York,Broome,3
+New York,Chenango,3
 New York,Clinton,4
-New York,Columbia,2
-New York,Delaware,1
+New York,Columbia,5
+New York,Cortland,1
+New York,Delaware,3
 New York,Dutchess,82
 New York,Erie,54
-New York,Essex,2
+New York,Essex,3
 New York,Fulton,1
 New York,Genesee,1
 New York,Greene,2
 New York,Hamilton,2
-New York,Herkimer,3
+New York,Herkimer,4
 New York,Jefferson,1
 New York,Livingston,2
+New York,Madison,1
 New York,Monroe,57
 New York,Montgomery,3
 New York,Nassau,1900
 New York,New York City,9045
-New York,Niagara,4
-New York,Oneida,4
-New York,Onondaga,17
-New York,Ontario,4
+New York,Niagara,6
+New York,Oneida,5
+New York,Onondaga,29
+New York,Ontario,6
 New York,Orange,247
-New York,Putnam,22
-New York,Rensselaer,20
+New York,Putnam,37
+New York,Rensselaer,26
 New York,Rockland,455
-New York,Saratoga,35
-New York,Schenectady,32
+New York,Saratoga,41
+New York,Schenectady,39
 New York,Schoharie,1
-New York,Steuben,2
+New York,St. Lawrence,1
+New York,Steuben,3
 New York,Suffolk,1034
-New York,Sullivan,12
+New York,Sullivan,16
 New York,Tioga,1
-New York,Tompkins,11
-New York,Ulster,18
-New York,Unknown,78
+New York,Tompkins,13
+New York,Ulster,26
 New York,Warren,1
 New York,Washington,1
 New York,Wayne,3
 New York,Westchester,1873
 New York,Wyoming,2
 North Carolina,Alamance,2
-North Carolina,Brunswick,6
+North Carolina,Brunswick,7
 North Carolina,Buncombe,3
 North Carolina,Cabarrus,6
 North Carolina,Carteret,5
@@ -745,10 +765,10 @@ North Carolina,Wake,52
 North Carolina,Watauga,2
 North Carolina,Wayne,1
 North Carolina,Wilson,3
-North Dakota,Burleigh,14
+North Dakota,Burleigh,15
 North Dakota,Cass,1
 North Dakota,Morton,8
-North Dakota,Pierce,1
+North Dakota,Pierce,2
 North Dakota,Ramsey,1
 North Dakota,Ward,3
 Ohio,Ashland,1
@@ -828,7 +848,7 @@ Pennsylvania,Adams,5
 Pennsylvania,Allegheny,40
 Pennsylvania,Beaver,3
 Pennsylvania,Berks,13
-Pennsylvania,Bucks,32
+Pennsylvania,Bucks,34
 Pennsylvania,Butler,1
 Pennsylvania,Centre,1
 Pennsylvania,Chester,23
@@ -846,7 +866,7 @@ Pennsylvania,Lehigh,19
 Pennsylvania,Luzerne,7
 Pennsylvania,Mercer,1
 Pennsylvania,Monroe,31
-Pennsylvania,Montgomery,87
+Pennsylvania,Montgomery,110
 Pennsylvania,Montour,1
 Pennsylvania,Northampton,21
 Pennsylvania,Philadelphia,91
@@ -864,7 +884,7 @@ South Carolina,Anderson,10
 South Carolina,Beaufort,14
 South Carolina,Berkeley,2
 South Carolina,Calhoun,1
-South Carolina,Charleston,14
+South Carolina,Charleston,13
 South Carolina,Clarendon,1
 South Carolina,Colleton,2
 South Carolina,Darlington,3
@@ -877,6 +897,7 @@ South Carolina,Greenville,19
 South Carolina,Greenwood,2
 South Carolina,Hampton,1
 South Carolina,Horry,11
+South Carolina,Jasper,1
 South Carolina,Kershaw,43
 South Carolina,Lancaster,5
 South Carolina,Lee,1
@@ -902,7 +923,7 @@ Tennessee,Blount,1
 Tennessee,Bradley,2
 Tennessee,Campbell,2
 Tennessee,Carroll,2
-Tennessee,Cheatham,3
+Tennessee,Cheatham,4
 Tennessee,Chester,1
 Tennessee,Cocke,1
 Tennessee,Cumberland,2
@@ -953,15 +974,15 @@ Texas,Collin,31
 Texas,Crane,1
 Texas,Dallas,132
 Texas,Deaf Smith,1
-Texas,Denton,24
+Texas,Denton,30
 Texas,DeWitt,1
 Texas,El Paso,6
-Texas,Ellis,3
+Texas,Ellis,5
 Texas,Fannin,1
 Texas,Fort Bend,29
 Texas,Galveston,11
 Texas,Gregg,1
-Texas,Harris,69
+Texas,Harris,74
 Texas,Hays,6
 Texas,Hockley,2
 Texas,Johnson,2
@@ -985,12 +1006,12 @@ Texas,Wichita,5
 Texas,Williamson,9
 Utah,Box Elder,1
 Utah,Cache,2
-Utah,Davis,17
-Utah,Salt Lake,60
-Utah,Summit,35
-Utah,Tooele,2
+Utah,Davis,19
+Utah,Salt Lake,84
+Utah,Summit,50
+Utah,Tooele,3
 Utah,Utah,7
-Utah,Wasatch,7
+Utah,Wasatch,8
 Utah,Washington,2
 Utah,Weber,6
 Vermont,Addison,3
@@ -1042,39 +1063,39 @@ Virginia,Williamsburg city,5
 Virginia,York,5
 Washington,Benton,7
 Washington,Chelan,3
-Washington,Clallam,2
+Washington,Clallam,4
 Washington,Clark,10
 Washington,Columbia,1
-Washington,Cowlitz,2
-Washington,Franklin,2
-Washington,Grant,11
+Washington,Cowlitz,3
+Washington,Franklin,3
+Washington,Grant,18
 Washington,Grays Harbor,1
-Washington,Island,19
-Washington,Jefferson,4
-Washington,King,935
-Washington,Kitsap,15
+Washington,Island,21
+Washington,Jefferson,6
+Washington,King,1036
+Washington,Kitsap,20
 Washington,Kittitas,4
 Washington,Klickitat,4
 Washington,Lewis,2
 Washington,Lincoln,1
 Washington,Mason,1
-Washington,Pierce,95
+Washington,Pierce,107
 Washington,San Juan,1
-Washington,Skagit,28
-Washington,Snohomish,446
-Washington,Spokane,16
+Washington,Skagit,34
+Washington,Snohomish,480
+Washington,Spokane,20
 Washington,Stevens,1
-Washington,Thurston,10
+Washington,Thurston,11
 Washington,Walla Walla,1
-Washington,Whatcom,14
+Washington,Whatcom,19
 Washington,Whitman,1
-Washington,Yakima,20
+Washington,Yakima,24
 West Virginia,Jackson,1
-West Virginia,Jefferson,2
-West Virginia,Kanawha,1
+West Virginia,Jefferson,3
+West Virginia,Kanawha,3
 West Virginia,Marshall,2
 West Virginia,Mercer,2
-West Virginia,Monongalia,1
+West Virginia,Monongalia,2
 West Virginia,Putnam,1
 West Virginia,Tucker,2
 Wisconsin,Bayfield,1
@@ -1092,7 +1113,7 @@ Wisconsin,Jefferson,2
 Wisconsin,Kenosha,10
 Wisconsin,La Crosse,5
 Wisconsin,Marathon,1
-Wisconsin,Milwaukee,182
+Wisconsin,Milwaukee,183
 Wisconsin,Outagamie,2
 Wisconsin,Ozaukee,13
 Wisconsin,Pierce,1
@@ -1108,8 +1129,8 @@ Wisconsin,Winnebago,5
 Wisconsin,Wood,1
 Wyoming,Campbell,1
 Wyoming,Carbon,1
-Wyoming,Fremont,9
-Wyoming,Laramie,5
+Wyoming,Fremont,10
+Wyoming,Laramie,6
 Wyoming,Natrona,1
 Wyoming,Park,1
 Wyoming,Sheridan,4
