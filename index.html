@@ -137,32 +137,7 @@
 							.style( 'opacity', 0.0 );
 					} );
 		} );
-		/*
-		d3.csv( 'https://raw.githubusercontent.com/wyattmaxey/coronamap/master/corona.csv' ).then( function( data ) {
-			
-			case_data = {};
-			for( let rec of data ) {
-				var state = rec['STATE'];
-				var county = rec['COUNTY'];
-				if( state === 'Louisiana' ) {
-					county += ' Parish';
-				} else {
-					county += ' County';
-				}
-
-				if( state in case_data ) {
-					case_data[state][county] = parseInt( rec['CASES'] );
-				} else {
-					case_data[state] = {};
-					case_data[state][county] = parseInt( rec['CASES'] );
-				}
-				if( !states.includes( state ) ) {
-					states.push( state );
-				}
-			}
-			*/
 		d3.csv( 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv' ).then( function( data ) {
-			console.log( data );
 			case_data = {};
 			var one_week = new Date();
 			one_week.setHours( 0, 0, 0, 0 );
@@ -178,7 +153,6 @@
 					}
 				}
 			}
-			console.log( case_data );
 
 			d3.json( 'https://api.census.gov/data/2017/pep/population?get=POP,GEONAME&for=county:*' + '&key=' + key ).then( function( raw_data ) {
 				raw_data = raw_data.slice( 1, raw_data.length );
@@ -200,39 +174,6 @@
 				}
 				set_color();
 			} );
-			/*
-			d3.json( 'https://api.census.gov/data/2017/pep/population?get=POP,GEONAME&for=county:*' + '&key=' + key ).then( function( raw_data ) {
-				raw_data = raw_data.slice( 1, raw_data.length );
-				var merge_data = {};
-				for( var i in raw_data ) {
-					var state = raw_data[i][1].split( ',' )[1].trim();
-					var county = raw_data[i][1].split( ',' )[0];
-					if( state in case_data ) {
-						var cases = 0
-						if ( county in case_data[state] ) {
-							cases = case_data[state][county];
-						}
-						metrics[raw_data[i][2] + raw_data[i][3]] = {
-							'population': parseInt( raw_data[i][0] ),
-							'cases': cases,
-							'cpc': ( cases / ( parseInt( raw_data[i][0] ) / 10000 ) ).toFixed( 2 ),
-							'county': county,
-							'state': state
-						}
-					} else {
-						metrics[raw_data[i][2] + raw_data[i][3]] = {
-							'population': 0,
-							'cases': 0,
-							'cpc': 0,
-							'county': county,
-							'state': state
-						}
-					}
-				}
-				set_color();
-				console.log( metrics );
-			} );
-			*/
 		} );
 
 		function zoomed() {
@@ -264,7 +205,6 @@
 					max = m;
 				}
 			}
-			console.log( d3.schemeOrRd );
 			var scale = d3.scaleQuantile()
 					.domain( arr )
 					.range( d3.schemeOrRd[8] )
