@@ -137,7 +137,7 @@
 							.style( 'opacity', 0.0 );
 					} );
 		} );
-
+		/*
 		d3.csv( 'https://raw.githubusercontent.com/wyattmaxey/coronamap/master/corona.csv' ).then( function( data ) {
 			
 			case_data = {};
@@ -160,9 +160,47 @@
 					states.push( state );
 				}
 			}
+			*/
+		d3.csv( 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv' ).then( function( data ) {
+			console.log( data );
+			case_data = {};
+			var one_week = new Date();
+			one_week.setHours( 0, 0, 0, 0 );
+			one_week.setDate( one_week.getDate() - 7 );
+			for( let rec of data ) {
+				var rec_date = new Date( rec.date );
+				if( rec_date >= one_week ) {
+					if( rec.fips in case_data && rec_date > case_data[rec.fips].date ) {
+						case_data[rec.fips].cases = rec.cases;
+						case_data[rec.fips].date = rec_date;
+					} else if ( !( rec.fips in case_data ) ) {
+						case_data[rec.fips] = { cases: rec.cases, date: rec_date };
+					}
+				}
+			}
+			console.log( case_data );
 
-			states.sort();
-
+			d3.json( 'https://api.census.gov/data/2017/pep/population?get=POP,GEONAME&for=county:*' + '&key=' + key ).then( function( raw_data ) {
+				raw_data = raw_data.slice( 1, raw_data.length );
+				for( var i in raw_data ) {
+					var fips = raw_data[i][2].toString() + raw_data[i][3].toString();
+					var cases = 0;
+					if( fips in case_data ) {
+						cases = case_data[fips].cases;
+					}
+					var state = raw_data[i][1].split( ',' )[1].trim();
+					var county = raw_data[i][1].split( ',' )[0];
+					metrics[fips] = {
+							'population': parseInt( raw_data[i][0] ),
+							'cases': cases,
+							'cpc': ( cases / ( parseInt( raw_data[i][0] ) / 10000 ) ).toFixed( 2 ),
+							'county': county,
+							'state': state
+						}
+				}
+				set_color();
+			} );
+			/*
 			d3.json( 'https://api.census.gov/data/2017/pep/population?get=POP,GEONAME&for=county:*' + '&key=' + key ).then( function( raw_data ) {
 				raw_data = raw_data.slice( 1, raw_data.length );
 				var merge_data = {};
@@ -194,6 +232,7 @@
 				set_color();
 				console.log( metrics );
 			} );
+			*/
 		} );
 
 		function zoomed() {
